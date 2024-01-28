@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+
+<style>
+    *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --orange: rgb(243, 186, 81); 
+    --winner-blocks: rgb(33, 33, 33);
+}
+
+body{
+    color: var(--orange);
+    font-family: 'Russo One', sans-serif;
+    background-color: rgb(57, 67, 68);
+}
+
+h1{
+    font-size: 54px;
+    text-transform: uppercase;
+}
+
+.container{
+    padding: 40px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+   
+}
+
+#playerboard{
+    width: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    
+}
+
+.box{
+    height: 150px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--orange);
+    font-size: 120px;
+    border-right: 4px solid;
+    border-bottom: 4px solid;
+}
+
+.box:nth-child(3n){
+    border-right: none;
+}
+
+.box:nth-child(6) ~ .box{
+    border-bottom: none;
+}
+
+button{
+    margin-top: 15px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color: var(--orange);
+    color: rgb(57, 67, 68);
+    border-color: var(--orange);
+    font-size: 18px;
+    transition: 200ms transform;
+    font-weight: 600;
+    font-family: 'Russo One', sans-serif;
+    letter-spacing: 1px;
+}
+
+button:hover{
+cursor: pointer;
+transform: translateY(-2px);
+filter: invert(5%);
+}
+
+</style>
+</head>
+
+<body>
+    <div class="container">
+        
+        <h1 id="playerText">Tic Tac Toe</h1>
+        <button id="restarbtn">Restart</button>
+     
+        <div id="playerboard">
+            <div class="box" id="0"></div>
+            <div class="box" id="1"></div>
+            <div class="box" id="2"></div>
+            <div class="box" id="3"></div>
+            <div class="box" id="4"></div>
+            <div class="box" id="5"></div>
+            <div class="box" id="6"></div>
+            <div class="box" id="7"></div>
+            <div class="box" id="8"></div>
+            
+        </div>
+    </div> 
+    </div>
+    <script src="tictac.js"></script>
+</body>
+</html>
